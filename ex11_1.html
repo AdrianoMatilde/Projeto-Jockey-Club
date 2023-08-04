@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <title>Exemplo 11.1</title>
+</head>
+<body>
+    <div class="container-fluid"><!--Início Container-->
+        <div class="row">
+            <div class="col-sm-4"><!--Início imagem-->
+                <img src="./images/ex11_1.jpg" alt="Jokey Club" class="img-fluid">
+            </div>
+            <!--Fim imagem-->
+            <div class="col-sm-8"><!--Início Formulário-->
+                <h1>Jokey Club - Controle de Apostas</h1>
+                <form>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="inCavalo"> Nº Cavalo:</label>
+                            <input type="number" min="1" class="form-control" id="inCavalo" required autofocus >
+                        </div>
+                        <div class="col-sm-6">
+                            <h5 id="outCavalo" class="mt-4"></h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="inAposta">Aposta R$:</label>
+                            <input type="number" class="form-control" min="1" step="0.5" id="inValor" required>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="submit" class="btn btn-primary mt-4" value="Apostar" id="btApostar">
+                            <input type="button" class="btn btn-warning mt-4" value="Resumo" id="btResumo">
+                            <input type="button" class="btn btn-success mt-4" value="Ganhador" id="btGanhador">
+                            <input type="button" class=" btn btn-danger mt-4" value="Novo Páreo" id="btNovo"> 
+                        </div>
+                    </div>
+                </form>
+                <pre class="mt-3"></pre>
+            </div>
+            
+            <!--Fim Formulário-->
+        </div>
+    </div>
+    <!--Fim Container-->
+
+    <script src="./scripts/ex11_1.js"></script>
+</body>
+</html>
