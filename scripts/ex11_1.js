@@ -76,6 +76,40 @@ frm.btResumo.addEventListener("click",()=>{
     respLista.innerText = resposta;
 });
 
+frm.btGanhador.addEventListener("click",()=>{
+    //Solicita o número do cavalo ganhador(Já converte para número)
+    const ganhador = Number(prompt("Nº do Cavalo Ganhador: "));
+
+    //para validar o preenchimento do prompt anterior
+    if(isNaN(ganhador) || !validarCavalo(ganhador)){
+        alert("Cavalo inválido");
+        return;
+    };
+
+    //uso do método reduce para somar o valor das apostas
+    const total = apostas.reduce((acumulador,aposta)=>acumulador + aposta.valor,0);
+
+    // Concatena em resumo o resultado a ser exibido na página
+    let resumo = `Resulrado Final do Páreo\n${"-".repeat(30)}\n`;
+
+    resumo += `Nº Total de Apostas: ${apostas.length}\n`;
+    resumo += `Total Geral R$: ${total.toFixed(2)}\n\n`;
+    resumo += `Ganhador Nº: ${ganhador} - ${obterCavalo(ganhador)}\n`;
+    resumo += `Nº de Apostas: ${contarApostas(ganhador)}\n`;
+    resumo += `Total Apostado R$: ${totalizarApostas(ganhador).toFixed(2)}`;
+
+    respLista.innerText = resumo; //exibe o resultado
+
+    frm.btApostar.disabled = true; //desabilita os botões apostar e ganhador
+    frm.btGanhador.disabled = true;
+    frm.btNovo.focus(); // joga o foco no botão "Novo Páreo"
+});
+
+frm.btNovo.addEventListener("click",()=>{
+    window.location.reload();
+});
+
+
 frm.inCavalo.addEventListener("focus",()=>{
     frm.inCavalo.value ="";
     respCavalo.innerText = "";
