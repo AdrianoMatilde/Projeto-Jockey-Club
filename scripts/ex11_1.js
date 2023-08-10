@@ -57,6 +57,25 @@ frm.inCavalo.addEventListener("blur",()=>{
     
 });
 
+frm.btResumo.addEventListener("click",()=>{
+    //vetor com valores zerados para cada cavalo
+    const somaApostas = [0,0,0,0,0,0];
+
+    //percorre apostas e acumula na posição do cavalo apostado (-1,  pois inicia em 0)
+
+    for (const aposta of apostas) {
+        somaApostas[aposta.cavalo-1] += aposta.valor;
+    }
+
+    //exibe o resultado
+    let resposta =`Nº Cavalo............ R$ Apostado\n${"-".repeat(33)}\n`;
+    CAVALOS.forEach((cavalo, i )=>{
+        resposta += `${i+1} ${cavalo.padEnd(20)}`;
+        resposta +=`${somaApostas[i].toFixed(2).padStart(11)}\n`;        
+    });
+    respLista.innerText = resposta;
+});
+
 frm.inCavalo.addEventListener("focus",()=>{
     frm.inCavalo.value ="";
     respCavalo.innerText = "";
