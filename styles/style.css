@@ -1,13 +1,36 @@
+*{
+    width: 100%;
+    background-color: white;
+}
+
+body {
+    margin: 0;
+    background-color: #111552;
+}
+
+
+.img-fluid{
+    border-radius: 60px;
+
+}
+
 h1{
     border-bottom-style: inset;      
 };
 
-h5{
+h2, p{
+    font-family: sans-serif;
+}
+
+p{
+    font-size:20px;
+}
+
+h3, h5, pre, li{
     font-style: italic;
 }
 
 pre{
-    font-style: italic;
     font-size: 1.1em;
 }
 
@@ -23,4 +46,8 @@ img.poltrona{
 }
 .entre-letras{
     letter-spacing: 0.5em;
+}
+
+.container-rodape {
+    text-align: center;
 }
