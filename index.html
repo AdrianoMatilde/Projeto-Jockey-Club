@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
 
     <title>Programa Jockey Club</title>
 </head>
+
 <body>
     <div class="container-fluid"><!--Início Container-->
         <div class="row">
@@ -17,11 +19,27 @@
             <!--Fim imagem-->
             <div class="col-sm-8"><!--Início Formulário-->
                 <h1>Jokey Club - Controle de Apostas</h1>
+                <h2>Os melhores cavalos estão aqui!</h2>
+                <p>Escolha seu cavalo vencedor.<br>Digite seu numero campeão e faça a sua aposta!<br>Que vença o
+                    melhor!<br>Boa sorte!</p>
+                <div class="lista-cavalos">
+
+                    <ol>
+                        <h3>Cavalos</h3>
+                        <li>Marujo</li>
+                        <li>Tordilho</li>
+                        <li>Belga</li>
+                        <li>Twister</li>
+                        <li>Jaade</li>
+                        <li>Lucky</li>
+                    </ol>
+                </div>
+
                 <form>
                     <div class="row">
                         <div class="col-sm-6">
                             <label for="inCavalo"> Nº Cavalo:</label>
-                            <input type="number" min="1" class="form-control" id="inCavalo" required autofocus >
+                            <input type="number" min="1" class="form-control" id="inCavalo" required autofocus>
                         </div>
                         <div class="col-sm-6">
                             <h5 id="outCavalo" class="mt-4"></h5>
@@ -32,22 +50,25 @@
                             <label for="inAposta">Aposta R$:</label>
                             <input type="number" class="form-control" min="1" step="0.5" id="inValor" required>
                         </div>
-                        <div class="col-sm-6">
-                            <input type="submit" class="btn btn-primary mt-4" value="Apostar" id="btApostar">
-                            <input type="button" class="btn btn-warning mt-4" value="Resumo" id="btResumo">
-                            <input type="button" class="btn btn-success mt-4" value="Ganhador" id="btGanhador">
-                            <input type="button" class=" btn btn-danger mt-4" value="Novo Páreo" id="btNovo"> 
-                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="submit" class="btn btn-primary mt-4" value="Apostar" id="btApostar">
+                        <input type="button" class="btn btn-warning mt-4" value="Resumo" id="btResumo">
+                        <input type="button" class="btn btn-success mt-4" value="Ganhador" id="btGanhador">
+                        <input type="button" class=" btn btn-danger mt-4" value="Novo Páreo" id="btNovo">
                     </div>
                 </form>
                 <pre class="mt-3"></pre>
             </div>
-            
             <!--Fim Formulário-->
         </div>
+    </div>
+    <div class="container-rodape"> <!-- Rodapé da página -->
+        <p>&copy; 2023 Fco Nolasco - Todos os direitos reservados</p>
     </div>
     <!--Fim Container-->
 
     <script src="./scripts/ex11_1.js"></script>
 </body>
+
 </html>
